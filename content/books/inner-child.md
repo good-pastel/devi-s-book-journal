@@ -2,8 +2,6 @@
 **Penulis:** Anette Isabella Ginting, M.Psi., Psikolog  
 **Topik:** Refleksi inner child, pengalaman masa kecil, dan pola emosi.
 
-> Catatan katalog: identitas buku kini sudah dilengkapi berdasarkan sampul yang diberikan. Isi di bawah tetap merupakan rangkuman tematik dari pembahasan kita, bukan rangkuman terverifikasi bab demi bab dari teks buku.
-
 ## Ringkasan cepat
 
 Istilah *inner child* sering digunakan untuk membicarakan bagian dari pengalaman emosional masa kecil yang masih terasa dalam kehidupan dewasa. Pengalaman awal, cara kita diperlakukan, dan pola hubungan yang dipelajari dapat memengaruhi bagaimana kita merespons konflik, kritik, penolakan, atau kebutuhan akan rasa aman.
