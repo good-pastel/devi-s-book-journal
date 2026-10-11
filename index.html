@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f2e9">
+  <meta name="description" content="Devi's Book Journal — rangkuman, bedah buku, dan gagasan yang ingin diingat.">
+  <title>Devi's Book Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Devi's Book Journal, beranda">
+      <span class="brand-mark" aria-hidden="true">db.</span>
+      <span class="brand-name">Devi's <strong>Book Journal</strong></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a class="nav-link active" href="#home">Beranda</a>
+      <a class="nav-link" href="#library">Koleksi</a>
+      <a class="nav-link" href="#about">Tentang</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> CATATAN UNTUK DIBACA KEMBALI</p>
+        <h1>Ide baik layak<br><em>diingat lebih lama.</em></h1>
+        <p class="hero-description">Sebuah perpustakaan kecil berisi rangkuman, pembahasan, dan gagasan dari buku-buku pilihan—agar pelajaran penting tidak hilang begitu saja.</p>
+        <a class="primary-button" href="#library">Jelajahi koleksi <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-label="Ilustrasi tumpukan buku dan bunga">
+        <div class="sun-disc"></div>
+        <div class="leaf leaf-one"></div>
+        <div class="leaf leaf-two"></div>
+        <div class="book-stack">
+          <div class="book book-lavender"><span>IDE &amp; PIKIRAN</span></div>
+          <div class="book book-pink"><span>CATATAN KECIL</span></div>
+          <div class="book book-cream"><span>THE ART OF READING</span></div>
+        </div>
+        <div class="flower flower-one">✿</div>
+        <div class="flower flower-two">✿</div>
+        <div class="hero-note">read slowly,<br>remember deeply.</div>
+      </div>
+      <div class="hero-bottom-note"><span>01 /</span> BUKU YANG MEMBUAT KITA BERPIKIR</div>
+    </section>
+
+    <section class="library-section section-wrap" id="library">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">RAK BUKU PRIBADI</p>
+          <h2>Koleksi <em>bacaan</em></h2>
+          <p class="section-description">Pilih buku untuk membaca intinya atau menyelami pembahasan lebih dalam.</p>
+        </div>
+        <div class="collection-count"><span id="book-count">5</span><small>CATATAN BUKU</small></div>
+      </div>
+
+      <div class="library-tools">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="Cari judul, penulis, atau gagasan..." autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+        <div class="category-filters" id="category-filters" aria-label="Filter berdasarkan kategori">
+          <button class="filter-chip active" type="button" data-category="Semua">Semua</button>
+          <button class="filter-chip" type="button" data-category="Filsafat & Masyarakat">Filsafat</button>
+          <button class="filter-chip" type="button" data-category="Pengembangan Diri">Pengembangan diri</button>
+          <button class="filter-chip" type="button" data-category="Psikologi">Psikologi</button>
+          <button class="filter-chip" type="button" data-category="Parenting">Parenting</button>
+        </div>
+      </div>
+
+      <div class="book-grid" id="book-grid" aria-live="polite">
+        <p class="loading-message">Menyiapkan rak buku...</p>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>Tidak ada buku yang cocok. Coba kata kunci atau kategori lain.</p>
+    </section>
+
+    <section class="quote-section">
+      <span class="quote-mark" aria-hidden="true">“</span>
+      <blockquote>Buku tidak selalu memberi jawaban. Kadang, buku yang baik memberi kita pertanyaan yang lebih tepat.</blockquote>
+      <p>SEBUAH CATATAN UNTUK DIRI SENDIRI</p>
+    </section>
+
+    <section class="about-section section-wrap" id="about">
+      <div class="about-icon" aria-hidden="true">✳</div>
+      <div>
+        <p class="eyebrow">TENTANG JURNAL INI</p>
+        <h2>Bukan tentang membaca semuanya.<br><em>Tentang mengingat yang berarti.</em></h2>
+        <p>Devi's Book Journal adalah ruang untuk menyimpan inti buku, memahami ide dengan bahasa yang lebih sederhana, dan menghubungkan gagasan dengan kehidupan sehari-hari. Catatan di sini merupakan rangkuman dan interpretasi, bukan pengganti buku aslinya.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">db.</span><span class="brand-name">Devi's <strong>Book Journal</strong></span></a>
+    <p>Dibuat dengan rasa ingin tahu <span aria-hidden="true">♡</span></p>
+    <a href="#home" class="back-top">Kembali ke atas ↑</a>
+  </footer>
+
+  <dialog class="book-dialog" id="book-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-topbar">
+      <span class="dialog-kicker">DEVI'S BOOK JOURNAL</span>
+      <button class="icon-button" id="close-dialog" type="button" aria-label="Tutup detail buku">×</button>
+    </div>
+    <div class="dialog-content">
+      <div class="dialog-book-art" id="dialog-book-art"><span>BOOK<br>NOTES</span></div>
+      <div class="dialog-main">
+        <p class="eyebrow" id="dialog-category"></p>
+        <h2 id="dialog-title"></h2>
+        <p class="dialog-author" id="dialog-author"></p>
+        <p class="dialog-summary" id="dialog-summary"></p>
+        <div class="dialog-tabs" role="tablist" aria-label="Bagian catatan buku">
+          <button class="dialog-tab active" type="button" data-tab="quick" role="tab" aria-selected="true">Ringkasan cepat</button>
+          <button class="dialog-tab" type="button" data-tab="deep" role="tab" aria-selected="false">Bedah lengkap</button>
+        </div>
+        <article class="markdown-content" id="markdown-content"></article>
+        <p class="source-note">Catatan ini adalah ringkasan/interpretasi. Untuk detail, nuansa, dan argumen lengkap, rujuk buku aslinya.</p>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
