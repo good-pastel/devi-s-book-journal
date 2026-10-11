@@ -17,7 +17,7 @@ const BOOKS = [
     title: "Sapiens",
     author: "Yuval Noah Harari",
     category: "Filsafat & Masyarakat",
-    status: "Sedang dibedah",
+    status: "Selesai dibedah",
     coverClass: "cover-sapiens",
     coverImage: "assets/images/covers/sapiens.jpg",
     coverTitle: "SAPIENS",
