@@ -92,7 +92,7 @@ function makeCard(book) {
       <div class="book-cover ${book.coverClass}" aria-hidden="true">
         ${book.coverImage
           ? `<img class="book-cover-image" src="${escapeHTML(book.coverImage)}" alt="" loading="lazy">`
-          : `<div class="cover-placeholder"><div class="cover-label">${book.coverTitle}</div><div class="cover-author">${escapeHTML(book.author)}</div><span class="cover-ornament">✳</span></div>`}
+          : `<div class="cover-placeholder"><div class="cover-label">${book.coverTitle}</div><div class="cover-author">${escapeHTML(book.author)}</div></div>`}
       </div>
       <div class="card-body">
         <p class="card-category">${escapeHTML(book.category)}</p>
