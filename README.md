@@ -4,7 +4,9 @@
 
 **A little corner for books, ideas, and things worth remembering.**
 
-Rangkuman singkat, catatan bacaan, dan pembahasan yang bisa dibuka kembali kapan saja.
+Hai, aku Devi! 👋 Selamat datang di sudut kecilku untuk menyimpan hal-hal menarik yang kutemukan dari buku. Aku membuat jurnal ini supaya ide-ide penting, pelajaran, dan pertanyaan yang muncul saat membaca bisa kusimpan dan kubaca lagi kapan saja—tanpa harus mencari dari awal.
+
+Semoga tempat kecil ini juga bisa jadi teman untuk belajar, berpikir, dan menemukan sudut pandang baru. 🌷
 
 🌷 *Cream · Dusty Pink · Lavender*
 
