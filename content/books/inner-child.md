@@ -59,4 +59,3 @@ Jika kenangan atau emosi terasa sangat mengganggu, memengaruhi aktivitas sehari-
 
 Pembahasan inner child dapat menjadi pintu untuk mengenali emosi dan pola perilaku. Gunakan konsepnya secara fleksibel: sebagai alat memahami diri, bukan label yang memastikan penyebab semua masalah.
 
-**Catatan sumber:** Halaman ini bersifat tematik karena identitas buku yang dimaksud belum terkonfirmasi.
