@@ -62,6 +62,19 @@ const BOOKS = [
     summary: "Membahas pengasuhan melalui kasih sayang, keteladanan, komunikasi, empati, dan batas yang sehat.",
     file: "content/books/cara-rasulullah-mendidik-anak.md",
     keywords: "parenting anak rasulullah keteladanan komunikasi empati"
+  },
+  {
+    id: "thinking-fast-and-slow",
+    title: "Thinking, Fast and Slow",
+    author: "Daniel Kahneman",
+    category: "Psikologi",
+    status: "Selesai dibedah",
+    coverClass: "cover-thinking-fast-slow",
+    coverImage: "assets/images/covers/thinking-fast-and-slow.jpg",
+    coverTitle: "THINKING<br>FAST AND SLOW",
+    summary: "Membahas cara kerja pikiran cepat dan lambat, bias kognitif, pengambilan keputusan, kepercayaan diri berlebihan, serta perbedaan antara pengalaman dan kenangan.",
+    file: "content/books/thinking-fast-and-slow.md",
+    keywords: "thinking fast and slow daniel kahneman psikologi bias kognitif pengambilan keputusan heuristik overconfidence prospect theory"
   }
 ];
 
@@ -132,12 +145,129 @@ function setCategory(category) {
   renderBooks();
 }
 
-function safeMarkdown(markdown) {
-  if (window.marked && typeof window.marked.parse === "function") {
-    return window.marked.parse(markdown);
-  }
-  return `<pre>${escapeHTML(markdown)}</pre>`;
+function renderInlineMarkdown(text) {
+  // Escape source text first so Markdown content cannot inject arbitrary HTML.
+  let html = escapeHTML(text);
+  const codeSpans = [];
+  html = html.replace(/`([^`]+)`/g, (_, code) => {
+    const token = `@@CODE${codeSpans.length}@@`;
+    codeSpans.push(`<code>${code}</code>`);
+    return token;
+  });
+  html = html
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/__(.+?)__/g, "<strong>$1</strong>")
+    .replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g, "<em>$1</em>")
+    .replace(/_([^_\n]+)_/g, "<em>$1</em>")
+    .replace(/~~(.+?)~~/g, "<del>$1</del>")
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" rel="noopener noreferrer">$1</a>');
+  codeSpans.forEach((code, index) => {
+    html = html.replace(`@@CODE${index}@@`, code);
+  });
+  return html;
 }
+
+function basicMarkdown(markdown) {
+  const lines = markdown.replace(/\r\n?/g, "\n").split("\n");
+  const output = [];
+  let paragraph = [];
+  let listType = null;
+  let quoteLines = [];
+  let tableLines = [];
+
+  const flushParagraph = () => {
+    if (paragraph.length) {
+      output.push(`<p>${renderInlineMarkdown(paragraph.join(" ").trim())}</p>`);
+      paragraph = [];
+    }
+  };
+  const flushList = () => {
+    if (!listType) return;
+    const tag = listType;
+    output.push(`<${tag}>${listItems.map((item) => `<li>${renderInlineMarkdown(item)}</li>`).join("")}</${tag}>`);
+    listType = null;
+    listItems = [];
+  };
+  const flushQuote = () => {
+    if (quoteLines.length) {
+      flushParagraph();
+      flushList();
+      output.push(`<blockquote>${quoteLines.map((line) => `<p>${renderInlineMarkdown(line)}</p>`).join("")}</blockquote>`);
+      quoteLines = [];
+    }
+  };
+  const flushTable = () => {
+    if (!tableLines.length) return;
+    flushParagraph();
+    flushList();
+    const rows = tableLines.filter((line) => !/^\s*\|?\s*:?-{3,}/.test(line));
+    const cells = rows.map((line) => line.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map((cell) => cell.trim()));
+    if (cells.length) {
+      const header = cells[0];
+      const body = cells.slice(1);
+      output.push(`<div class="markdown-table-wrap"><table><thead><tr>${header.map((cell) => `<th>${renderInlineMarkdown(cell)}</th>`).join("")}</tr></thead><tbody>${body.map((row) => `<tr>${row.map((cell) => `<td>${renderInlineMarkdown(cell)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`);
+    }
+    tableLines = [];
+  };
+  let listItems = [];
+
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i];
+    const trimmed = line.trim();
+    const isTableRow = trimmed.includes("|") && /^\s*\|?.+\|.+\|?\s*$/.test(line);
+    const nextIsTableRule = i + 1 < lines.length && /^\s*\|?\s*:?-{3,}/.test(lines[i + 1]);
+
+    if (!trimmed) {
+      flushParagraph(); flushList(); flushQuote(); flushTable();
+      continue;
+    }
+    if (isTableRow && (tableLines.length || nextIsTableRule)) {
+      flushParagraph(); flushList(); flushQuote();
+      tableLines.push(line);
+      continue;
+    }
+    if (tableLines.length) flushTable();
+
+    const heading = trimmed.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+    if (heading) {
+      flushParagraph(); flushList(); flushQuote();
+      const level = heading[1].length;
+      output.push(`<h${level}>${renderInlineMarkdown(heading[2])}</h${level}>`);
+      continue;
+    }
+    if (/^(---+|___+|\*\*\*+)\s*$/.test(trimmed)) {
+      flushParagraph(); flushList(); flushQuote();
+      output.push("<hr>");
+      continue;
+    }
+    const quote = trimmed.match(/^>\s?(.*)$/);
+    if (quote) {
+      flushParagraph(); flushList();
+      quoteLines.push(quote[1]);
+      continue;
+    }
+    flushQuote();
+    const listMatch = trimmed.match(/^([-*+]\s+|\d+[.)]\s+)(.+)$/);
+    if (listMatch) {
+      flushParagraph();
+      const nextType = /^\d/.test(listMatch[1]) ? "ol" : "ul";
+      if (listType && listType !== nextType) flushList();
+      if (!listType) listType = nextType;
+      listItems.push(listMatch[2]);
+      continue;
+    }
+    flushList();
+    paragraph.push(trimmed);
+  }
+  flushParagraph(); flushList(); flushQuote(); flushTable();
+  return output.join("\n");
+}
+
+
+function safeMarkdown(markdown) {
+  return basicMarkdown(markdown);
+}
+
 
 async function showBook(bookId, tab = "quick") {
   const book = BOOKS.find((item) => item.id === bookId);
