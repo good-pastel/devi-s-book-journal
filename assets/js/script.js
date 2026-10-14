@@ -87,6 +87,12 @@ const dialog = document.querySelector("#book-dialog");
 const closeDialogButton = document.querySelector("#close-dialog");
 const markdownContent = document.querySelector("#markdown-content");
 const dialogTabs = document.querySelectorAll(".dialog-tab");
+const pagination = document.querySelector("#book-pagination");
+const previousPageButton = document.querySelector("#page-prev");
+const nextPageButton = document.querySelector("#page-next");
+const pageLabel = document.querySelector("#page-label");
+const BOOKS_PER_PAGE = 6;
+let currentPage = 1;
 let selectedCategory = "Semua";
 let currentBook = null;
 let currentTab = "quick";
@@ -128,15 +134,33 @@ function renderBooks() {
     return matchesCategory && searchable.includes(query);
   });
 
-  grid.innerHTML = visibleBooks.length
-    ? visibleBooks.map(makeCard).join("")
+  const totalPages = Math.max(1, Math.ceil(visibleBooks.length / BOOKS_PER_PAGE));
+  currentPage = Math.min(Math.max(currentPage, 1), totalPages);
+  const startIndex = (currentPage - 1) * BOOKS_PER_PAGE;
+  const pageBooks = visibleBooks.slice(startIndex, startIndex + BOOKS_PER_PAGE);
+
+  grid.innerHTML = pageBooks.length
+    ? pageBooks.map(makeCard).join("")
     : "";
   count.textContent = String(visibleBooks.length);
   emptyState.hidden = visibleBooks.length > 0;
+
+  // Show pagination only when the current result set spans multiple pages.
+  pagination.hidden = totalPages <= 1;
+  pageLabel.textContent = `Page ${currentPage} of ${totalPages}`;
+  previousPageButton.disabled = currentPage <= 1;
+  nextPageButton.disabled = currentPage >= totalPages;
+}
+
+function setPage(page) {
+  currentPage = page;
+  renderBooks();
+  document.querySelector("#library").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function setCategory(category) {
   selectedCategory = category;
+  currentPage = 1;
   filters.querySelectorAll(".filter-chip").forEach((button) => {
     const active = button.dataset.category === category;
     button.classList.toggle("active", active);
@@ -314,7 +338,16 @@ async function loadBookSection() {
   }
 }
 
-searchInput.addEventListener("input", renderBooks);
+searchInput.addEventListener("input", () => {
+  currentPage = 1;
+  renderBooks();
+});
+previousPageButton.addEventListener("click", () => {
+  if (currentPage > 1) setPage(currentPage - 1);
+});
+nextPageButton.addEventListener("click", () => {
+  setPage(currentPage + 1);
+});
 filters.addEventListener("click", (event) => {
   const button = event.target.closest("[data-category]");
   if (button) setCategory(button.dataset.category);

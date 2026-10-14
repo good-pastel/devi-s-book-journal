@@ -102,6 +102,11 @@
         <p class="loading-message">Menyiapkan rak buku...</p>
       </div>
       <p class="empty-state" id="empty-state" hidden>Tidak ada buku yang cocok. Coba kata kunci atau kategori lain.</p>
+      <nav class="book-pagination" id="book-pagination" aria-label="Navigasi halaman koleksi buku" hidden>
+        <button class="pagination-arrow" id="page-prev" type="button" aria-label="Halaman sebelumnya" disabled>‹</button>
+        <span class="pagination-label" id="page-label" aria-live="polite">Page 1 of 1</span>
+        <button class="pagination-arrow" id="page-next" type="button" aria-label="Halaman berikutnya" disabled>›</button>
+      </nav>
     </section>
 
     <section class="quote-section">

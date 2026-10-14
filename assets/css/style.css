@@ -252,3 +252,34 @@ h2 { margin: 0; font-size: clamp(32px, 4vw, 44px); line-height: 1.18; }
 .markdown-content th, .markdown-content td { padding: 9px 10px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
 .markdown-content th { background: #f5eff7; font-weight: 700; }
 .markdown-content pre { white-space: pre-wrap; overflow-wrap: anywhere; font-family: inherit; }
+
+
+/* Minimal pagination for the book collection */
+.book-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+  color: var(--lavender-deep);
+  font-size: 12px;
+}
+.book-pagination[hidden] { display: none; }
+.pagination-label { min-width: 76px; text-align: center; font-variant-numeric: tabular-nums; }
+.pagination-arrow {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: var(--lavender);
+  color: #554365;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  transition: background .2s, transform .2s, opacity .2s;
+}
+.pagination-arrow:hover:not(:disabled) { background: #cfc3e3; transform: translateX(1px); }
+.pagination-arrow:disabled { background: transparent; color: #b7aeb7; cursor: default; opacity: .55; }
+.pagination-arrow:focus-visible { outline: 3px solid var(--lavender-deep); outline-offset: 3px; }
