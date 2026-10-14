@@ -96,21 +96,13 @@ Dalam pendekatan Montessori, orang tua menyiapkan kegiatan yang sesuai, menunjuk
 
 Beberapa kebiasaan yang dapat diubah:
 
+| Kebiasaan yang sering terjadi                      | Pendekatan yang bisa dicoba                                |
+| -------------------------------------------------- | ---------------------------------------------------------- |
+| Langsung membantu karena anak dianggap belum mampu | Beri kesempatan mencoba dengan pengawasan                  |
+| Terus mengoreksi ketika anak melakukan kesalahan   | Tunjukkan cara yang benar, lalu beri waktu untuk berlatih  |
+| Memuji hanya hasil yang sempurna                   | Hargai usaha, ketekunan, dan kemauan memperbaiki kesalahan |
+
 ---
-
-  Kebiasaan yang sering terjadi       Pendekatan yang bisa dicoba
-
----
-
-  Langsung membantu karena anak       Beri kesempatan mencoba dengan
-  dianggap belum mampu                pengawasan
-
-  Terus mengoreksi ketika anak        Tunjukkan cara yang benar, lalu
-  melakukan kesalahan                 beri waktu untuk berlatih
-
-Memuji hanya hasil yang sempurna    Hargai usaha, ketekunan, dan
-                                      kemauan memperbaiki kesalahan
--------------------------------------------------------------------
 
 Misalnya, ketika anak salah memasukkan tangan saat memakai baju, orang tua bisa bertanya, "Coba kita lihat lubangnya. Tangan yang ini masuk ke mana, ya?" Kalimat itu mengajak anak berpikir tanpa membuatnya merasa tidak mampu.
 
