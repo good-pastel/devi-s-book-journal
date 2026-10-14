@@ -523,8 +523,7 @@ biasa, meskipun selama perjalanan ada banyak momen yang melelahkan.
 
 Karena itu, ada baiknya membedakan dua pertanyaan:
 
-- "Apakah kehidupan sehari-hariku terasa baik ketika aku
-  menjalaninya?"
+- "Apakah kehidupan sehari-hariku terasa baik ketika aku menjalaninya?"
 - "Bagaimana aku menilai kehidupanku ketika melihatnya kembali?"
 
 Keduanya penting, tetapi mengukur hal yang berbeda. Kenangan dan makna
@@ -541,43 +540,30 @@ menganalisis semua hal secara berlebihan.
 
 - Tunda keputusan penting jika sedang sangat emosional atau
   terburu-buru, bila situasinya memungkinkan.
-- Pisahkan fakta, asumsi, dan dugaan. Jangan menempatkan ketiganya
-  seolah sama kuat.
+- Pisahkan fakta, asumsi, dan dugaan. Jangan menempatkan ketiganya seolah sama kuat.
 - Cari pembanding sebelum menerima angka atau penawaran pertama.
-- Periksa data dasar, terutama saat sebuah contoh terasa sangat
-  meyakinkan.
-- Tanyakan apa yang belum diketahui dan bukti apa yang bisa mengubah
-  kesimpulan.
+- Periksa data dasar, terutama saat sebuah contoh terasa sangat meyakinkan.
+- Tanyakan apa yang belum diketahui dan bukti apa yang bisa mengubah kesimpulan.
 
 ### Saat membuat rencana
 
 - Bandingkan rencana dengan pengalaman proyek sejenis.
-- Masukkan waktu untuk revisi, hambatan, dan hal-hal yang tidak
-  berjalan sesuai harapan.
-- Catat prediksi sebelum hasil diketahui agar penilaian setelah
-  kejadian tidak mengubah ingatan tentang perkiraan awal.
-- Bedakan faktor yang benar-benar dapat dikendalikan dari faktor yang
-  bergantung pada kebetulan.
+- Masukkan waktu untuk revisi, hambatan, dan hal-hal yang tidak berjalan sesuai harapan.
+- Catat prediksi sebelum hasil diketahui agar penilaian setelah kejadian tidak mengubah ingatan tentang perkiraan awal.
+- Bedakan faktor yang benar-benar dapat dikendalikan dari faktor yang bergantung pada kebetulan.
 
 ### Saat menilai hasil
 
-- Jangan langsung menyimpulkan bahwa hasil baik selalu membuktikan
-  keputusan yang baik. Keputusan yang masuk akal pun bisa berakhir
-  buruk karena risiko.
-- Jangan langsung menyimpulkan bahwa hasil buruk membuktikan semua
-  langkah sebelumnya salah.
-- Lihat proses, informasi yang tersedia saat keputusan dibuat, dan
-  faktor yang berada di luar kendali.
+- Jangan langsung menyimpulkan bahwa hasil baik selalu membuktikan keputusan yang baik. Keputusan yang masuk akal pun bisa berakhir buruk karena risiko.
+- Jangan langsung menyimpulkan bahwa hasil buruk membuktikan semua langkah sebelumnya salah.
+- Lihat proses, informasi yang tersedia saat keputusan dibuat, dan faktor yang berada di luar kendali.
 
 ### Saat menilai pengalaman hidup
 
-- Jangan hanya mengejar momen yang kelak terlihat hebat dalam
-  kenangan.
+- Jangan hanya mengejar momen yang kelak terlihat hebat dalam kenangan.
 - Perhatikan juga apakah hari-hari biasa terasa nyaman dan bermakna.
-- Ketika mengingat sebuah pengalaman, sadari bahwa momen paling
-  dramatis belum tentu mewakili keseluruhannya.
-- Beri ruang untuk dua penilaian sekaligus: bagaimana pengalaman
-  terasa saat dijalani dan bagaimana pengalaman itu dikenang.
+- Ketika mengingat sebuah pengalaman, sadari bahwa momen paling dramatis belum tentu mewakili keseluruhannya.
+- Beri ruang untuk dua penilaian sekaligus: bagaimana pengalaman terasa saat dijalani dan bagaimana pengalaman itu dikenang.
 
 ## 8. Catatan kritis: apakah semua temuan ini berlaku untuk semua orang?
 

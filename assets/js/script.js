@@ -75,6 +75,32 @@ const BOOKS = [
     summary: "Membahas cara kerja pikiran cepat dan lambat, bias kognitif, pengambilan keputusan, kepercayaan diri berlebihan, serta perbedaan antara pengalaman dan kenangan.",
     file: "content/books/thinking-fast-and-slow.md",
     keywords: "thinking fast and slow daniel kahneman psikologi bias kognitif pengambilan keputusan heuristik overconfidence prospect theory"
+  },
+  {
+    id: "islamic-montessori",
+    title: "Islamic Montessori",
+    author: "Brillian Wijaya",
+    category: "Parenting",
+    status: "Selesai dibedah",
+    coverClass: "cover-islamic-montessori",
+    coverImage: "assets/images/covers/islamic-montessori.jpg",
+    coverTitle: "ISLAMIC<br>MONTESORI",
+    summary: "Membahas penerapan metode Montessori dalam pendidikan anak yang dipadukan dengan nilai-nilai Islam, kemandirian, akhlak, dan pembelajaran melalui aktivitas sehari-hari.",
+    file: "content/books/islamic-montessori.md",
+    keywords: "islamic montessori parenting anak pendidikan islam kemandirian akhlak aktivitas anak"
+  },
+  {
+    id: "sejarah-tuhan",
+    title: "Sejarah Tuhan",
+    author: "Karen Armstrong",
+    category: "Agama & Filsafat",
+    status: "Selesai dibedah",
+    coverClass: "cover-sejarah-tuhan",
+    coverImage: "assets/images/covers/sejarah-tuhan.jpg",
+    coverTitle: "SEJARAH<br>TUHAN",
+    summary: "Menelusuri perjalanan konsep Tuhan selama kurang lebih empat ribu tahun dalam tradisi Yudaisme, Kristen, dan Islam. Karen Armstrong membahas bagaimana sejarah, filsafat, pengalaman spiritual, dan perubahan masyarakat membentuk cara manusia memahami Tuhan. Buku ini mengajak pembaca melihat hubungan antara iman, akal, dan sejarah tanpa menyederhanakan perbedaan keyakinan.",
+    file: "content/books/sejarah-tuhan.md",
+    keywords: "sejarah tuhan sejarah agama konsep ketuhanan yudaisme kristen islam filsafat spiritualitas iman akal sejarah masyarakat"
   }
 ];
 
