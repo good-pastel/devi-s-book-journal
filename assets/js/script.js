@@ -130,6 +130,25 @@ function escapeHTML(value) {
   })[character]);
 }
 
+// Label tombol boleh dibuat lebih ringkas tanpa mengubah kategori asli untuk filter.
+const CATEGORY_LABELS = {
+  "Filsafat & Masyarakat": "Filsafat",
+  "Pengembangan Diri": "Pengembangan diri"
+};
+
+function renderCategoryFilters() {
+  const categories = [...new Set(BOOKS.map((book) => book.category).filter(Boolean))];
+  const buttons = [
+    '<button class="filter-chip active" type="button" data-category="Semua" aria-pressed="true">Semua</button>',
+    ...categories.map((category) => {
+      const label = CATEGORY_LABELS[category] || category;
+      return `<button class="filter-chip" type="button" data-category="${escapeHTML(category)}" aria-pressed="false">${escapeHTML(label)}</button>`;
+    })
+  ];
+
+  filters.innerHTML = buttons.join("\n");
+}
+
 function makeCard(book) {
   const inProgress = book.status === "Sedang dibedah";
   return `
@@ -415,4 +434,5 @@ document.querySelectorAll(".main-nav a").forEach((link) => {
   });
 });
 
+renderCategoryFilters();
 renderBooks();
