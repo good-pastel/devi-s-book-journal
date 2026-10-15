@@ -101,6 +101,32 @@ const BOOKS = [
     summary: "Menelusuri perjalanan konsep Tuhan selama kurang lebih empat ribu tahun dalam tradisi Yudaisme, Kristen, dan Islam. Karen Armstrong membahas bagaimana sejarah, filsafat, pengalaman spiritual, dan perubahan masyarakat membentuk cara manusia memahami Tuhan. Buku ini mengajak pembaca melihat hubungan antara iman, akal, dan sejarah tanpa menyederhanakan perbedaan keyakinan.",
     file: "content/books/sejarah-tuhan.md",
     keywords: "sejarah tuhan sejarah agama konsep ketuhanan yudaisme kristen islam filsafat spiritualitas iman akal sejarah masyarakat"
+  },
+  {
+    id: "meditations",
+    title: "Meditations",
+    author: "Marcus Aurelius",
+    category: "Filsafat",
+    status: "Selesai dibedah",
+    coverClass: "cover-meditations",
+    coverImage: "assets/images/covers/meditations.jpg",
+    coverTitle: "MEDITATIONS",
+    summary: "Catatan reflektif Marcus Aurelius tentang Stoisisme, mengelola pikiran, menerima hal yang tidak dapat dikendalikan, dan menjalani hidup dengan kebijaksanaan, keberanian, keadilan, serta pengendalian diri.",
+    file: "content/books/meditations.md",
+    keywords: "filsafat stoisisme marcus aurelius refleksi pengendalian diri kebijaksanaan keberanian keadilan"
+  },
+  {
+    id: "dark-psychology",
+    title: "Dark Psychology",
+    author: "James W. Williams",
+    category: "Psikologi",
+    status: "Selesai dibedah",
+    coverClass: "cover-dark-psychology",
+    coverImage: "assets/images/covers/dark-psychology.jpg",
+    coverTitle: "Dark<br>Psychology",
+    summary: "Mengenali manipulasi, penipuan, persuasi gelap, dan cara menjaga batas diri dalam hubungan sehari-hari.",
+    file: "content/books/dark-psychology.md",
+    keywords: "Dark Psychology psikologi manipulasi penipuan persuasi gelap batas diri hubungan interpersonal"
   }
 ];
 
